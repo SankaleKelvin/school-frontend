@@ -1,0 +1,29 @@
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-weight: normal;
+    font-size: 20px;
+    font-family: Helvetica 'Arial Narrow', Arial, sans-serif;
+}
+
+.about-us {
+    margin: 20px;
+    max-height: 1000px;
+    display:flexbox;
+    justify-content: center;
+}
+
+.services-text {
+    background-color: rgb(241, 239, 237);
+}
+
+.vision-section {
+    background-color: rgb(251, 251, 251);
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
