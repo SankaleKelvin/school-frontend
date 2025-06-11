@@ -17,7 +17,7 @@
         <a href="ContactUs.html">Contact Us</a>
         <a href="Login.html">Login</a>
         <a href="SignUp.html">Sign Up</a>
-        <a href="WelcomePage.html">Welcome</a>
+        <a href="Courses.html">Courses</a>
       </div>
     </nav>
 
@@ -25,33 +25,74 @@
       <h1>Sign Up</h1>
 
       <form action="#" method="post" class="form-content">
+        <label for="">First Name:</label>
+        <input
+          type="text"
+          name="firstName"
+          id="firstNameId"
+          placeholder="enter first name"
+          required
+        />
+        <label for="">Last Name:</label>
+        <input
+          type="text"
+          name="lastName"
+          id="lastNameId"
+          placeholder="enter last name"
+          required
+        />
         <label for="">User Name:</label>
         <input
           type="text"
           name="username"
-          id=""
-          placeholder="enter user name"
+          id="userNameId"
+          placeholder="user name"
+          required
+          readonly
         />
         <label for="">Email:</label>
-        <input
-          type="text"
-          name="email"
-          id=""
-          placeholder="enter email"
-        />
+        <input type="email" name="email" id="" placeholder="enter email" required/>
 
         <label for="">Password:</label>
-        <input type="text" name="password" id="" placeholder="enter password" />
+        <input type="password" name="password" id="" placeholder="enter password" />
 
         <label for="">Confirm Password:</label>
-        <input type="text" name="confirmPassword" id="" placeholder="comnfirm password" />
+        <input
+          type="password"
+          name="confirmPassword"
+          id=""
+          placeholder="comnfirm password"
+        />
 
         <div class="buttons">
           <button type="submit">Sign Up</button>
           <button type="reset">Reset</button>
         </div>
       </form>
-      <p>Login if you have an account. <a href="Login.html">Sign In</a></p>
+      <p>Login if you have an account. <a href="Login.html">Sign </a></p>
     </main>
+    
+    <script>
+      function updateUserName(){
+
+        let fName = document.getElementById("firstNameId").value.trim();
+        let lName = document.getElementById("lastNameId").value.trim();
+        let uName = document.getElementById("userNameId").value.trim();
+      
+        uName = `${fName} ${lName}`.trim();
+        console.log(uName);
+        document.getElementById('userNameId').value=uName;
+
+      }
+      
+        document.getElementById("firstNameId").addEventListener('input', updateUserName);
+        document.getElementById("lastNameId").addEventListener('input', updateUserName);
+
+      updateUserName();
+
+
+      
+    </script>
+
   </body>
 </html>
